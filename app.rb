@@ -13,11 +13,9 @@ class App < Sinatra::Base
 
   post '/checkout' do
     @item = params[:item]
-    session[:item] = @item
+    session[:message] = @item
     @session = session
 
-    # store_name("names.txt", @name)
-    # session[:message] = "Successfully stored the name #{@name}."
     erb :checkout
   end
 end
